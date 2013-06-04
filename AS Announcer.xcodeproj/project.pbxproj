@@ -16,6 +16,9 @@
 		DC5066E8175D6560003579C6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DC5066E7175D6560003579C6 /* Default.png */; };
 		DC5066EA175D6560003579C6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC5066E9175D6560003579C6 /* Default@2x.png */; };
 		DC5066EC175D6560003579C6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC5066EB175D6560003579C6 /* Default-568h@2x.png */; };
+		DC5066F4175D65BE003579C6 /* ASLSAnnouncementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5066F3175D65BE003579C6 /* ASLSAnnouncementsViewController.m */; };
+		DC5066F7175D66DE003579C6 /* ASLSAnnouncement.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5066F6175D66DE003579C6 /* ASLSAnnouncement.m */; };
+		DC5066FA175D6C5B003579C6 /* ASLSAnnouncementGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5066F9175D6C5A003579C6 /* ASLSAnnouncementGroup.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,12 @@
 		DC5066E7175D6560003579C6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		DC5066E9175D6560003579C6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		DC5066EB175D6560003579C6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DC5066F2175D65BE003579C6 /* ASLSAnnouncementsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASLSAnnouncementsViewController.h; sourceTree = "<group>"; };
+		DC5066F3175D65BE003579C6 /* ASLSAnnouncementsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASLSAnnouncementsViewController.m; sourceTree = "<group>"; };
+		DC5066F5175D66DE003579C6 /* ASLSAnnouncement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASLSAnnouncement.h; sourceTree = "<group>"; };
+		DC5066F6175D66DE003579C6 /* ASLSAnnouncement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASLSAnnouncement.m; sourceTree = "<group>"; };
+		DC5066F8175D6C5A003579C6 /* ASLSAnnouncementGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASLSAnnouncementGroup.h; sourceTree = "<group>"; };
+		DC5066F9175D6C5A003579C6 /* ASLSAnnouncementGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASLSAnnouncementGroup.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +87,14 @@
 		DC5066DB175D6560003579C6 /* AS Announcer */ = {
 			isa = PBXGroup;
 			children = (
+				DC5066F5175D66DE003579C6 /* ASLSAnnouncement.h */,
+				DC5066F6175D66DE003579C6 /* ASLSAnnouncement.m */,
 				DC5066E4175D6560003579C6 /* ASLSAppDelegate.h */,
 				DC5066E5175D6560003579C6 /* ASLSAppDelegate.m */,
+				DC5066F2175D65BE003579C6 /* ASLSAnnouncementsViewController.h */,
+				DC5066F3175D65BE003579C6 /* ASLSAnnouncementsViewController.m */,
+				DC5066F8175D6C5A003579C6 /* ASLSAnnouncementGroup.h */,
+				DC5066F9175D6C5A003579C6 /* ASLSAnnouncementGroup.m */,
 				DC5066DC175D6560003579C6 /* Supporting Files */,
 			);
 			path = "AS Announcer";
@@ -167,6 +182,9 @@
 			files = (
 				DC5066E2175D6560003579C6 /* main.m in Sources */,
 				DC5066E6175D6560003579C6 /* ASLSAppDelegate.m in Sources */,
+				DC5066F4175D65BE003579C6 /* ASLSAnnouncementsViewController.m in Sources */,
+				DC5066F7175D66DE003579C6 /* ASLSAnnouncement.m in Sources */,
+				DC5066FA175D6C5B003579C6 /* ASLSAnnouncementGroup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
