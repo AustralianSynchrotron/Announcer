@@ -11,9 +11,9 @@
 @interface ASLSAnnouncement : NSObject
 
 @property (strong, nonatomic) NSString *name;
-@property (nonatomic) NSUInteger code;
+@property (strong, nonatomic) NSString *code;
 
-+ (id)announcementWithName:(NSString *)name andCode:(NSUInteger)code;
++ (id)announcementWithName:(NSString *)name andCode:(NSString *)code;
 - (void)makeAnnouncement;
 
 @end

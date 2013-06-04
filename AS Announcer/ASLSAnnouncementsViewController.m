@@ -36,15 +36,15 @@ static NSString *AnnouncementCellIdentifier = @"AnnouncementCell";
     
     ASLSAnnouncementGroup *faultGroup = [ASLSAnnouncementGroup announcementGroupWithTitle:@"Fault"];
     faultGroup.announcements = @[
-        [ASLSAnnouncement announcementWithName:@"Beam Dump" andCode:101],
-        [ASLSAnnouncement announcementWithName:@"Beam Back" andCode:102],
-        [ASLSAnnouncement announcementWithName:@"Injection Delayed" andCode:103]
+        [ASLSAnnouncement announcementWithName:@"Beam Dump" andCode:@"101"],
+        [ASLSAnnouncement announcementWithName:@"Beam Back" andCode:@"102"],
+        [ASLSAnnouncement announcementWithName:@"Injection Delayed" andCode:@"103"]
     ];
     ASLSAnnouncementGroup *injectionGroup = [ASLSAnnouncementGroup announcementGroupWithTitle:@"Injection"];
     injectionGroup.announcements =  @[
-        [ASLSAnnouncement announcementWithName:@"5 Minutes" andCode:201],
-        [ASLSAnnouncement announcementWithName:@"Commencing" andCode:202],
-        [ASLSAnnouncement announcementWithName:@"Complete" andCode:203]
+        [ASLSAnnouncement announcementWithName:@"5 Minutes" andCode:@"201"],
+        [ASLSAnnouncement announcementWithName:@"Commencing" andCode:@"202"],
+        [ASLSAnnouncement announcementWithName:@"Complete" andCode:@"203"]
     ];
     self.announcements = @[faultGroup, injectionGroup];
     
