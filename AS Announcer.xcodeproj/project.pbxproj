@@ -21,6 +21,10 @@
 		DC5066FA175D6C5B003579C6 /* ASLSAnnouncementGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5066F9175D6C5A003579C6 /* ASLSAnnouncementGroup.m */; };
 		DC5067F6175DC56D003579C6 /* announce_codes.json in Resources */ = {isa = PBXBuildFile; fileRef = DC5067F5175DC56D003579C6 /* announce_codes.json */; };
 		DC5067F8175DCACA003579C6 /* groupings.json in Resources */ = {isa = PBXBuildFile; fileRef = DC5067F7175DCACA003579C6 /* groupings.json */; };
+		DC5067FA175DD679003579C6 /* iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = DC5067F9175DD679003579C6 /* iPhone.png */; };
+		DC5067FC175DD6BA003579C6 /* iPhone Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = DC5067FB175DD6BA003579C6 /* iPhone Retina.png */; };
+		DC5067FE175DD6C2003579C6 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = DC5067FD175DD6C2003579C6 /* iPad.png */; };
+		DC506800175DD6C6003579C6 /* iPad Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = DC5067FF175DD6C6003579C6 /* iPad Retina.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,10 @@
 		DC5067F2175DADDA003579C6 /* ASLSSiteSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASLSSiteSettings.h; sourceTree = "<group>"; };
 		DC5067F5175DC56D003579C6 /* announce_codes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = announce_codes.json; sourceTree = "<group>"; };
 		DC5067F7175DCACA003579C6 /* groupings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = groupings.json; sourceTree = "<group>"; };
+		DC5067F9175DD679003579C6 /* iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPhone.png; path = ../iPhone.png; sourceTree = "<group>"; };
+		DC5067FB175DD6BA003579C6 /* iPhone Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPhone Retina.png"; path = "../iPhone Retina.png"; sourceTree = "<group>"; };
+		DC5067FD175DD6C2003579C6 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPad.png; path = ../iPad.png; sourceTree = "<group>"; };
+		DC5067FF175DD6C6003579C6 /* iPad Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad Retina.png"; path = "../iPad Retina.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,10 @@
 		DC5066DC175D6560003579C6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DC5067FF175DD6C6003579C6 /* iPad Retina.png */,
+				DC5067FD175DD6C2003579C6 /* iPad.png */,
+				DC5067FB175DD6BA003579C6 /* iPhone Retina.png */,
+				DC5067F9175DD679003579C6 /* iPhone.png */,
 				DC5067F5175DC56D003579C6 /* announce_codes.json */,
 				DC5067F7175DCACA003579C6 /* groupings.json */,
 				DC5066DD175D6560003579C6 /* AS Announcer-Info.plist */,
@@ -180,6 +192,10 @@
 				DC5066EC175D6560003579C6 /* Default-568h@2x.png in Resources */,
 				DC5067F6175DC56D003579C6 /* announce_codes.json in Resources */,
 				DC5067F8175DCACA003579C6 /* groupings.json in Resources */,
+				DC5067FA175DD679003579C6 /* iPhone.png in Resources */,
+				DC5067FC175DD6BA003579C6 /* iPhone Retina.png in Resources */,
+				DC5067FE175DD6C2003579C6 /* iPad.png in Resources */,
+				DC506800175DD6C6003579C6 /* iPad Retina.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +339,7 @@
 				DC5066F1175D6560003579C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
