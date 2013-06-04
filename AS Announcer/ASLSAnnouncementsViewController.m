@@ -20,15 +20,6 @@ static NSString *AnnouncementCellIdentifier = @"AnnouncementCell";
 
 @implementation ASLSAnnouncementsViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (id)JSONObjectFromResource:(NSString *)resource {
     NSString *path = [[NSBundle mainBundle] pathForResource:resource ofType:@"json"];
     NSData *data = [NSData dataWithContentsOfFile:path];
@@ -55,12 +46,6 @@ static NSString *AnnouncementCellIdentifier = @"AnnouncementCell";
     }
 
     self.announcementGroups = announcementGroups;
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (ASLSAnnouncementGroup *)announcementGroupForSection:(NSInteger)section {
@@ -99,7 +84,7 @@ static NSString *AnnouncementCellIdentifier = @"AnnouncementCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     ASLSAnnouncement *announcement = [self announcementForIndexPath:indexPath];
     [announcement makeAnnouncement];
-    [[self.tableView cellForRowAtIndexPath:indexPath] setSelected:NO animated:YES];
+    [self.tableView cellForRowAtIndexPath:indexPath].selected = NO;
 }
 
 @end
