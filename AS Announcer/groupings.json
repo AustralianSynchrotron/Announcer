@@ -2,7 +2,7 @@
   {
     "title": "Injection",
     "announcements": [
-      { "title": "5 Mins", "code": "INJECTION_SOON"},
+      { "title": "5 Mins to Injection", "code": "INJECTION_SOON"},
       { "title": "Injection Commencing", "code": "INJECTION_COMMENCING"},
       { "title": "Injection Complete", "code": "INJECTION_COMPLETE"}
     ]
@@ -11,7 +11,57 @@
     "title": "Fault",
     "announcements": [
       { "title": "Beam Dump", "code": "FAULT_BEAM_DUMP"},
-      { "title": "Beam Back", "code": "FAULT_BEAM_BACK"}
+      { "title": "Beam Back", "code": "FAULT_BEAM_BACK"},
+      { "title": "Injection Delayed", "code": "FAULT_INJECTION_DELAYED"},
+      { "title": "Injection Postponed", "code": "FAULT_INJECTION_POSTPONED"}
     ]
-  }
+  },
+  {
+    "title": "Scraping",
+    "announcements": [
+      { "title": "5 Mins to Scrape", "code": "SCRAPING_SOON"},
+      { "title": "Scraping Commencing", "code": "SCRAPING_COMMENCING"},
+      { "title": "Scraping Complete", "code": "SCRAPING_COMPLETE"}
+    ]
+  },
+  {
+    "title": "Topup",
+    "announcements": [
+      { "title": "Topup Started", "code": "TOPUP_COMMENCING"},
+      { "title": "Topup Ended", "code": "TOPUP_COMPLETE"}
+    ]
+  },
+  {
+    "title": "Search & Secure: Injection System",
+    "announcements": [
+      { "title": "5 Mins", "code": "SS_INJ_SOON"},
+      { "title": "Closed", "code": "SS_INJ_CLOSED"},
+      { "title": "Secure", "code": "SS_INJ_SECURE"}
+    ]
+  },
+  {
+    "title": "Search & Secure: Storage Ring",
+    "announcements": [
+      { "title": "5 Mins", "code": "SS_SR_SOON"},
+      { "title": "Closed", "code": "SS_SR_CLOSED"},
+      { "title": "Secure", "code": "SS_SR_SECURE"}
+    ]
+  },
+  {
+    "title": "Search & Secure: Full",
+    "announcements": [
+      { "title": "5 Mins", "code": "SS_SR_INJ_SOON"},
+      { "title": "Closed", "code": "SS_SR_INJ_CLOSED"},
+      { "title": "Secure", "code": "SS_SR_INJ_SECURE"}
+    ]
+  },
+  {
+    "title": "Studies",
+    "announcements": [
+      { "title": "Injection Studies", "code": "STUDIES_INJECTION"},
+      { "title": "Machine Studies", "code": "STUDIES_MACHINE"},
+      { "title": "Testing Commencing", "code": "STUDIES_TESTING_COMMENCING"},
+      { "title": "Testing Complete", "code": "STUDIES_TESTING_COMPLETE"}
+    ]
+  },
 ]
