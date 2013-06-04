@@ -84,7 +84,7 @@ static NSString *AnnouncementCellIdentifier = @"AnnouncementCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     ASLSAnnouncement *announcement = [self announcementForIndexPath:indexPath];
     [announcement makeAnnouncement];
-    [self.tableView cellForRowAtIndexPath:indexPath].selected = NO;
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end
