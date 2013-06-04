@@ -19,6 +19,8 @@
 		DC5066F4175D65BE003579C6 /* ASLSAnnouncementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5066F3175D65BE003579C6 /* ASLSAnnouncementsViewController.m */; };
 		DC5066F7175D66DE003579C6 /* ASLSAnnouncement.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5066F6175D66DE003579C6 /* ASLSAnnouncement.m */; };
 		DC5066FA175D6C5B003579C6 /* ASLSAnnouncementGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5066F9175D6C5A003579C6 /* ASLSAnnouncementGroup.m */; };
+		DC5067F6175DC56D003579C6 /* announce_codes.json in Resources */ = {isa = PBXBuildFile; fileRef = DC5067F5175DC56D003579C6 /* announce_codes.json */; };
+		DC5067F8175DCACA003579C6 /* groupings.json in Resources */ = {isa = PBXBuildFile; fileRef = DC5067F7175DCACA003579C6 /* groupings.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		DC5066F8175D6C5A003579C6 /* ASLSAnnouncementGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASLSAnnouncementGroup.h; sourceTree = "<group>"; };
 		DC5066F9175D6C5A003579C6 /* ASLSAnnouncementGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASLSAnnouncementGroup.m; sourceTree = "<group>"; };
 		DC5067F2175DADDA003579C6 /* ASLSSiteSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASLSSiteSettings.h; sourceTree = "<group>"; };
+		DC5067F5175DC56D003579C6 /* announce_codes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = announce_codes.json; sourceTree = "<group>"; };
+		DC5067F7175DCACA003579C6 /* groupings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = groupings.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 		DC5066DC175D6560003579C6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DC5067F5175DC56D003579C6 /* announce_codes.json */,
+				DC5067F7175DCACA003579C6 /* groupings.json */,
 				DC5066DD175D6560003579C6 /* AS Announcer-Info.plist */,
 				DC5066DE175D6560003579C6 /* InfoPlist.strings */,
 				DC5066E1175D6560003579C6 /* main.m */,
@@ -172,6 +178,8 @@
 				DC5066E8175D6560003579C6 /* Default.png in Resources */,
 				DC5066EA175D6560003579C6 /* Default@2x.png in Resources */,
 				DC5066EC175D6560003579C6 /* Default-568h@2x.png in Resources */,
+				DC5067F6175DC56D003579C6 /* announce_codes.json in Resources */,
+				DC5067F8175DCACA003579C6 /* groupings.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

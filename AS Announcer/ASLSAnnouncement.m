@@ -24,6 +24,7 @@
     request.HTTPMethod = @"POST";
     request.HTTPBody = [[NSString stringWithFormat:@"code=%@", self.code] dataUsingEncoding:NSUTF8StringEncoding];
     [NSURLConnection sendAsynchronousRequest:request queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+        // TODO: Handle errors
         if (error) {
             NSLog(@"Error with request: %@", error);
             return;

@@ -14,7 +14,7 @@ static NSString *AnnouncementCellIdentifier = @"AnnouncementCell";
 
 @interface ASLSAnnouncementsViewController ()
 
-@property (strong, nonatomic) NSArray *announcements;
+@property (strong, nonatomic) NSArray *announcementGroups;
 
 @end
 
@@ -29,49 +29,32 @@ static NSString *AnnouncementCellIdentifier = @"AnnouncementCell";
     return self;
 }
 
+- (id)JSONObjectFromResource:(NSString *)resource {
+    NSString *path = [[NSBundle mainBundle] pathForResource:resource ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    return [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:AnnouncementCellIdentifier];
     
-    ASLSAnnouncementGroup *faultGroup = [ASLSAnnouncementGroup announcementGroupWithTitle:@"Fault"];
-    faultGroup.announcements = @[
-        [ASLSAnnouncement announcementWithName:@"Beam Dump" andCode:@"101"],
-        [ASLSAnnouncement announcementWithName:@"Beam Back" andCode:@"102"],
-        [ASLSAnnouncement announcementWithName:@"Injection Delayed" andCode:@"103"]
-    ];
-    ASLSAnnouncementGroup *injectionGroup = [ASLSAnnouncementGroup announcementGroupWithTitle:@"Injection"];
-    injectionGroup.announcements =  @[
-        [ASLSAnnouncement announcementWithName:@"5 Minutes" andCode:@"201"],
-        [ASLSAnnouncement announcementWithName:@"Commencing" andCode:@"202"],
-        [ASLSAnnouncement announcementWithName:@"Complete" andCode:@"203"]
-    ];
-    self.announcements = @[faultGroup, injectionGroup];
+    NSDictionary *codes = [self JSONObjectFromResource:@"announce_codes"];
+    NSArray *groupings = [self JSONObjectFromResource:@"groupings"];
     
-    /*
-     print 'The sound option you selected is not available. Please select from the following:'
-     print '======== Misc. ========'
-     print '900    Ping'
-     print '901    PA_Test_Start.wav'
-     print '902    PA_Test_Finish.wav'
-     print '903    Mute Volume'
-     print '======== Fault ========'
-     print '101    Beam_dump.wav'
-     print '102    Beam_returned.wav'
-     print '103    Injection_delayed.wav'
-     print '104    Injection_postponed.wav'
-     print '======== Inject ========'
-     print '201    5mins_to_injection.wav'
-     print '202    Injection_commencing.wav'
-     print '203    Injection_complete.wav'
-     print '======== Scrape ========'
-     print '301    Scraping_About.wav'
-     print '302    Scraping_Commencing.wav'
-     print '303    Scraping_Complete.wav'
-     print 'Others are available, but not yet added.'
-    */
-    
-    
+    NSMutableArray *announcementGroups = [NSMutableArray arrayWithCapacity:[groupings count]];
+    for (NSDictionary *sectionSpec in groupings) {
+        ASLSAnnouncementGroup *group = [ASLSAnnouncementGroup announcementGroupWithTitle:sectionSpec[@"title"]];
+        NSMutableArray *announcements = [NSMutableArray arrayWithCapacity:[sectionSpec[@"announcements"] count]];
+        for (NSDictionary *announcementSpec in sectionSpec[@"announcements"]) {
+            ASLSAnnouncement *announcement = [ASLSAnnouncement announcementWithName:announcementSpec[@"title"] andCode:codes[announcementSpec[@"code"]]];
+            [announcements addObject:announcement];
+        }
+        group.announcements = announcements;
+        [announcementGroups addObject:group];
+    }
+
+    self.announcementGroups = announcementGroups;
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -81,7 +64,7 @@ static NSString *AnnouncementCellIdentifier = @"AnnouncementCell";
 }
 
 - (ASLSAnnouncementGroup *)announcementGroupForSection:(NSInteger)section {
-    return self.announcements[section];
+    return self.announcementGroups[section];
 }
 
 - (ASLSAnnouncement *)announcementForIndexPath:(NSIndexPath *)indexPath {
@@ -91,7 +74,7 @@ static NSString *AnnouncementCellIdentifier = @"AnnouncementCell";
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [self.announcements count];
+    return [self.announcementGroups count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

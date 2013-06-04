@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Injection",
+    "announcements": [
+      { "title": "5 Mins", "code": "INJECTION_SOON"},
+      { "title": "Injection Commencing", "code": "INJECTION_COMMENCING"},
+      { "title": "Injection Complete", "code": "INJECTION_COMPLETE"}
+    ]
+  },
+  {
+    "title": "Fault",
+    "announcements": [
+      { "title": "Beam Dump", "code": "FAULT_BEAM_DUMP"},
+      { "title": "Beam Back", "code": "FAULT_BEAM_BACK"}
+    ]
+  }
+]
