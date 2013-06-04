@@ -7,7 +7,7 @@
 //
 
 #import "ASLSAnnouncement.h"
-#import <zeromq-ios/zmq.h>
+#import "ASLSSiteSettings.h"
 
 @implementation ASLSAnnouncement
 
@@ -19,25 +19,22 @@
 }
 
 - (void)makeAnnouncement {
-    NSLog(@"%s %@ %@", __PRETTY_FUNCTION__, self.name, self.code);
-    void *context = zmq_ctx_new();
-    void *socket = zmq_socket(context, ZMQ_REQ);
-    const char serverEndpoint[] = "tcp://10.6.100.199/announcer";
-    int connectErr = zmq_connect(socket, serverEndpoint);
-    NSLog(@"%i", connectErr);
-    if (connectErr == 0) {
-        NSStringEncoding encoding = NSUTF8StringEncoding;
-        const char *message = [self.code cStringUsingEncoding:encoding];
-        NSUInteger messageLength = [self.code lengthOfBytesUsingEncoding:encoding];
-        int flags = 0;
-        errno = 0;
-        int sendErr = zmq_send(socket, message, messageLength, flags);
-        if (sendErr != 0) {
-            NSLog(@"error: %s", strerror(errno));
+    NSURL *announceURL = [NSURL URLWithString:@"/announcer/announce" relativeToURL:kASLSAnnouncerSiteURL];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:announceURL];
+    request.HTTPMethod = @"POST";
+    request.HTTPBody = [[NSString stringWithFormat:@"code=%@", self.code] dataUsingEncoding:NSUTF8StringEncoding];
+    [NSURLConnection sendAsynchronousRequest:request queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+        if (error) {
+            NSLog(@"Error with request: %@", error);
+            return;
         }
-    }
-    
-    zmq_disconnect(socket, serverEndpoint);
+        NSDictionary *returnedJSON = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        if (error) {
+            NSLog(@"Error deserializing JSON: %@", error);
+            return;
+        }
+        NSLog(@"%@", returnedJSON);
+    }];
 }
 
 @end

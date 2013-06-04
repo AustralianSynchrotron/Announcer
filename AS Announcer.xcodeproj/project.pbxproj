@@ -19,8 +19,6 @@
 		DC5066F4175D65BE003579C6 /* ASLSAnnouncementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5066F3175D65BE003579C6 /* ASLSAnnouncementsViewController.m */; };
 		DC5066F7175D66DE003579C6 /* ASLSAnnouncement.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5066F6175D66DE003579C6 /* ASLSAnnouncement.m */; };
 		DC5066FA175D6C5B003579C6 /* ASLSAnnouncementGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5066F9175D6C5A003579C6 /* ASLSAnnouncementGroup.m */; };
-		DC5067EC175D86F5003579C6 /* zeromq-ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5067EB175D86F5003579C6 /* zeromq-ios.framework */; };
-		DC5067EE175D8BFA003579C6 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5067ED175D8BFA003579C6 /* libc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,8 +41,7 @@
 		DC5066F6175D66DE003579C6 /* ASLSAnnouncement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASLSAnnouncement.m; sourceTree = "<group>"; };
 		DC5066F8175D6C5A003579C6 /* ASLSAnnouncementGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASLSAnnouncementGroup.h; sourceTree = "<group>"; };
 		DC5066F9175D6C5A003579C6 /* ASLSAnnouncementGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASLSAnnouncementGroup.m; sourceTree = "<group>"; };
-		DC5067EB175D86F5003579C6 /* zeromq-ios.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "zeromq-ios.framework"; sourceTree = "<group>"; };
-		DC5067ED175D8BFA003579C6 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		DC5067F2175DADDA003579C6 /* ASLSSiteSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASLSSiteSettings.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +49,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC5067EE175D8BFA003579C6 /* libc++.dylib in Frameworks */,
 				DC5066D6175D6560003579C6 /* UIKit.framework in Frameworks */,
 				DC5066D8175D6560003579C6 /* Foundation.framework in Frameworks */,
 				DC5066DA175D6560003579C6 /* CoreGraphics.framework in Frameworks */,
-				DC5067EC175D86F5003579C6 /* zeromq-ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,8 +78,6 @@
 		DC5066D4175D6560003579C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DC5067ED175D8BFA003579C6 /* libc++.dylib */,
-				DC5067EB175D86F5003579C6 /* zeromq-ios.framework */,
 				DC5066D5175D6560003579C6 /* UIKit.framework */,
 				DC5066D7175D6560003579C6 /* Foundation.framework */,
 				DC5066D9175D6560003579C6 /* CoreGraphics.framework */,
@@ -95,6 +88,7 @@
 		DC5066DB175D6560003579C6 /* AS Announcer */ = {
 			isa = PBXGroup;
 			children = (
+				DC5067F2175DADDA003579C6 /* ASLSSiteSettings.h */,
 				DC5066F5175D66DE003579C6 /* ASLSAnnouncement.h */,
 				DC5066F6175D66DE003579C6 /* ASLSAnnouncement.m */,
 				DC5066E4175D6560003579C6 /* ASLSAppDelegate.h */,
@@ -235,7 +229,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/zeromq-ios.framework/Headers";
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
@@ -262,7 +256,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/zeromq-ios.framework/Headers";
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "";
