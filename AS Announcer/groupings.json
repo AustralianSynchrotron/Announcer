@@ -2,7 +2,7 @@
   {
     "title": "Injection",
     "announcements": [
-      { "title": "5 Mins to Injection", "code": "INJECTION_SOON"},
+      { "title": "5 Minutes to Injection", "code": "INJECTION_SOON"},
       { "title": "Injection Commencing", "code": "INJECTION_COMMENCING"},
       { "title": "Injection Complete", "code": "INJECTION_COMPLETE"}
     ]
@@ -19,7 +19,7 @@
   {
     "title": "Scraping",
     "announcements": [
-      { "title": "5 Mins to Scrape", "code": "SCRAPING_SOON"},
+      { "title": "5 Minutes to Scrape", "code": "SCRAPING_SOON"},
       { "title": "Scraping Commencing", "code": "SCRAPING_COMMENCING"},
       { "title": "Scraping Complete", "code": "SCRAPING_COMPLETE"}
     ]
@@ -34,25 +34,25 @@
   {
     "title": "Search & Secure: Injection System",
     "announcements": [
-      { "title": "5 Mins", "code": "SS_INJ_SOON"},
-      { "title": "Closed", "code": "SS_INJ_CLOSED"},
-      { "title": "Secure", "code": "SS_INJ_SECURE"}
+      { "title": "5 Minute Warning", "code": "SS_INJ_SOON"},
+      { "title": "Tunnels Closed", "code": "SS_INJ_CLOSED"},
+      { "title": "Tunnels Secure", "code": "SS_INJ_SECURE"}
     ]
   },
   {
     "title": "Search & Secure: Storage Ring",
     "announcements": [
-      { "title": "5 Mins", "code": "SS_SR_SOON"},
-      { "title": "Closed", "code": "SS_SR_CLOSED"},
-      { "title": "Secure", "code": "SS_SR_SECURE"}
+      { "title": "5 Minute Warning", "code": "SS_SR_SOON"},
+      { "title": "Tunnels Closed", "code": "SS_SR_CLOSED"},
+      { "title": "Tunnels Secure", "code": "SS_SR_SECURE"}
     ]
   },
   {
     "title": "Search & Secure: Full",
     "announcements": [
-      { "title": "5 Mins", "code": "SS_SR_INJ_SOON"},
-      { "title": "Closed", "code": "SS_SR_INJ_CLOSED"},
-      { "title": "Secure", "code": "SS_SR_INJ_SECURE"}
+      { "title": "5 Minute Warning", "code": "SS_SR_INJ_SOON"},
+      { "title": "Tunnels Closed", "code": "SS_SR_INJ_CLOSED"},
+      { "title": "Tunnels Secure", "code": "SS_SR_INJ_SECURE"}
     ]
   },
   {
@@ -64,4 +64,11 @@
       { "title": "Testing Complete", "code": "STUDIES_TESTING_COMPLETE"}
     ]
   },
+  {
+    "title": "PA",
+    "announcements": [
+      { "title": "PA Test Started", "code": "PA_TEST_START"},
+      { "title": "PA Test Complete", "code": "PA_TEST_COMPLETE"}
+    ]
+  }
 ]
