@@ -19,6 +19,7 @@
 }
 
 - (void)makeAnnouncement {
+    return;
     NSURL *announceURL = [NSURL URLWithString:@"/announcer/announce" relativeToURL:kASLSAnnouncerSiteURL];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:announceURL];
     request.HTTPMethod = @"POST";

@@ -9,6 +9,7 @@
 #import "ASLSAnnouncementsViewController.h"
 #import "ASLSAnnouncement.h"
 #import "ASLSAnnouncementGroup.h"
+#import "ASLSAnnouncementCell.h"
 
 static NSString *AnnouncementCellIdentifier = @"AnnouncementCell";
 
@@ -28,7 +29,7 @@ static NSString *AnnouncementCellIdentifier = @"AnnouncementCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:AnnouncementCellIdentifier];
+    [self.tableView registerClass:[ASLSAnnouncementCell class] forCellReuseIdentifier:AnnouncementCellIdentifier];
     
     NSDictionary *codes = [self JSONObjectFromResource:@"announce_codes"];
     NSArray *groupings = [self JSONObjectFromResource:@"groupings"];
@@ -71,10 +72,10 @@ static NSString *AnnouncementCellIdentifier = @"AnnouncementCell";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:AnnouncementCellIdentifier forIndexPath:indexPath];
+    ASLSAnnouncementCell *cell = [tableView dequeueReusableCellWithIdentifier:AnnouncementCellIdentifier forIndexPath:indexPath];
     
     ASLSAnnouncement *announcement = [self announcementForIndexPath:indexPath];
-    cell.textLabel.text = announcement.name;
+    cell.titleLabel.text = announcement.name;
     
     return cell;
 }

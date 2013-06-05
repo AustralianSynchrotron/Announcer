@@ -25,6 +25,7 @@
 		DC5067FC175DD6BA003579C6 /* iPhone Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = DC5067FB175DD6BA003579C6 /* iPhone Retina.png */; };
 		DC5067FE175DD6C2003579C6 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = DC5067FD175DD6C2003579C6 /* iPad.png */; };
 		DC506800175DD6C6003579C6 /* iPad Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = DC5067FF175DD6C6003579C6 /* iPad Retina.png */; };
+		DCFDA668175EB1CA004FBD9F /* ASLSAnnouncementCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFDA667175EB1CA004FBD9F /* ASLSAnnouncementCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,8 @@
 		DC5067FB175DD6BA003579C6 /* iPhone Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPhone Retina.png"; path = "../iPhone Retina.png"; sourceTree = "<group>"; };
 		DC5067FD175DD6C2003579C6 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPad.png; path = ../iPad.png; sourceTree = "<group>"; };
 		DC5067FF175DD6C6003579C6 /* iPad Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad Retina.png"; path = "../iPad Retina.png"; sourceTree = "<group>"; };
+		DCFDA666175EB1CA004FBD9F /* ASLSAnnouncementCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASLSAnnouncementCell.h; sourceTree = "<group>"; };
+		DCFDA667175EB1CA004FBD9F /* ASLSAnnouncementCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASLSAnnouncementCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,8 @@
 				DC5066E5175D6560003579C6 /* ASLSAppDelegate.m */,
 				DC5066F2175D65BE003579C6 /* ASLSAnnouncementsViewController.h */,
 				DC5066F3175D65BE003579C6 /* ASLSAnnouncementsViewController.m */,
+				DCFDA666175EB1CA004FBD9F /* ASLSAnnouncementCell.h */,
+				DCFDA667175EB1CA004FBD9F /* ASLSAnnouncementCell.m */,
 				DC5066F8175D6C5A003579C6 /* ASLSAnnouncementGroup.h */,
 				DC5066F9175D6C5A003579C6 /* ASLSAnnouncementGroup.m */,
 				DC5066DC175D6560003579C6 /* Supporting Files */,
@@ -211,6 +216,7 @@
 				DC5066F4175D65BE003579C6 /* ASLSAnnouncementsViewController.m in Sources */,
 				DC5066F7175D66DE003579C6 /* ASLSAnnouncement.m in Sources */,
 				DC5066FA175D6C5B003579C6 /* ASLSAnnouncementGroup.m in Sources */,
+				DCFDA668175EB1CA004FBD9F /* ASLSAnnouncementCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
