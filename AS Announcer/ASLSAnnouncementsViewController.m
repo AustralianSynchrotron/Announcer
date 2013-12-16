@@ -13,9 +13,10 @@
 
 static NSString *AnnouncementCellIdentifier = @"AnnouncementCell";
 
-@interface ASLSAnnouncementsViewController ()
+@interface ASLSAnnouncementsViewController () <UIActionSheetDelegate>
 
 @property (strong, nonatomic) NSArray *announcementGroups;
+@property (strong, nonatomic) ASLSAnnouncement *selectedAnnouncement;
 
 @end
 
@@ -83,9 +84,22 @@ static NSString *AnnouncementCellIdentifier = @"AnnouncementCell";
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    ASLSAnnouncement *announcement = [self announcementForIndexPath:indexPath];
-    [announcement makeAnnouncement];
+    self.selectedAnnouncement = [self announcementForIndexPath:indexPath];
+    
+    NSString *message = [NSString stringWithFormat:@"Announce \"%@\"?", self.selectedAnnouncement.name];
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:message delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Announce" otherButtonTitles:nil];
+    [actionSheet showInView:self.view];
+    
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - UIActionSheetDelegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+        [self.selectedAnnouncement makeAnnouncement];
+    }
+    self.selectedAnnouncement = nil;
 }
 
 @end
